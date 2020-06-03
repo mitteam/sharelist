@@ -1,16 +1,23 @@
-  {
-  "version": 2,
-  "builds": [
-    { 
-      "src": "/app/index.js", 
-      "use": "@now/node" 
-    }
-  ],
+{
+    "version": 2,
+    "routes": [
+        { "src": "/api/.*", "dest": "/api/now.js" },
+        { "src": "/.*", "dest": "/api/now.js" }
+    ],
   "routes": [
     {
-      "src": "/app/.*",
+      "src": "/users",
       "dest": "/app/index.js",
-      "methods": ["GET"]
+      "methods": [
+        "GET"
+      ]
+    },
+    {
+      "src": "/user",
+      "dest": "/app/index.js",
+      "methods": [
+        "POST"
+      ]
     }
   ]
 }
