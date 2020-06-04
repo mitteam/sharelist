@@ -1,6 +1,5 @@
 {
     "version": 2,
-    {
   "builds": [
     { "src": "app/index.js", "use": "@now/node" }
   ],
